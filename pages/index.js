@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <div class="flex flex-col h-screen w-screen space-y-3">
+    <div class="flex flex-col h-screen w-screen max-w-screen space-y-3">
       <Head>
         <title>Training Schedule</title>
         <meta
@@ -68,7 +68,7 @@ export default function Home() {
 
       <nav
         id="header"
-        class="bg-white border-gray-200 px-3 py-2.5 rounded dark:bg-gray-900"
+        class="h-[50px] sticky top-0 z-50 bg-white border-gray-200 px-3 py-2.5 rounded dark:bg-gray-900"
       >
         <div class="container flex flex-wrap justify-between items-center mx-0">
           <a href="https://flowbite.com/" class="flex items-center">
@@ -78,10 +78,10 @@ export default function Home() {
           </a>
         </div>
       </nav>
-      <div id="main" class="flex-grow px-3">
-        <div class="overflow-x-auto relative">
+      <div id="main" class="h-[calc(100%-150px)] flex-grow px-3">
+        <div class="h-full overflow-x-auto relative">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase">
+            <thead class="sticky top-0 z-50 text-xs text-gray-700 uppercase">
               <tr class="bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
                 <th scope="col" class="py-3 px-6">
                   Monday
