@@ -27,8 +27,8 @@ export default function Home() {
                 <>
                   <h3 class="mb-2 text-lg font-bold dark:text-white">Warmup</h3>
                   <ul class="space-y-1 max-w-md list-none list-inside text-gray-500 dark:text-gray-400">
-                    {warmupContent.map((c) => (
-                      <li>{c.trim()}</li>
+                    {warmupContent.map((c, idx) => (
+                      <li key="idx">{c.trim()}</li>
                     ))}
                   </ul>
                 </>
@@ -38,8 +38,8 @@ export default function Home() {
                   <h3 class="mt-5 mb-2 text-lg font-bold dark:text-white">
                     Workout
                   </h3>
-                  {workoutContent.map((content) => (
-                    <div class="mb-6">
+                  {workoutContent.map((content, idx) => (
+                    <div key={idx} class="mb-6">
                       <p class="dark:text-gray-200 font-semibold">
                         {content.name.trim()}
                       </p>
